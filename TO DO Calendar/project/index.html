@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="calendar">
+        <header>
+            <h1 id="month-year"></h1>
+        </header>
+        <table id="calendar-table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-day"></h2>
+            <textarea id="modal-task" rows="4" cols="50"></textarea>
+            <button id="modal-save">Save</button>
+        </div>
+    </div>
+   <div class="toDoBody">
+    <h1>To Do For Today</h1>
+    <form id="addTaskForm">
+        <input type="text" id="newTaskInput" placeholder="Add a new task...">
+        <button type="submit">Add Task</button>
+    </form>
+    <ul id="taskList"></ul>
+
+   
+   </div>
+   <script src="js/scripts.js"></script>
+</body>
+</html>

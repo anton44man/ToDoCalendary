@@ -1,0 +1,243 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #4682B4;
+}
+header {
+  color: white;
+}
+.calendar {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.calendar header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  height: 40px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  line-height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: normal;
+}
+
+td.empty {
+  background-color: #f2f2f2;
+  user-select: none;
+}
+
+td.today {
+  background-color: #ff0;
+}
+
+td:hover {
+  background-color: #e0f2d5;
+}
+
+.task-indicator {
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#modal .close:hover,
+#modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#modal button:hover {
+  background-color: #45a049;
+}
+
+#modal button:focus {
+  outline: none;
+}
+
+#modal button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#modal button:disabled:hover {
+  background-color: #ccc;
+}
+/*-----------------------------------*/
+
+#toDobody {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #E6E6FA;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#addTaskForm {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    max-width: 50%;
+}
+
+#newTaskInput {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #E6E6FA;
+    border: none;
+    font-size: 16px;
+    color: #333;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border: 5px;
+  cursor: pointer;
+  font-style: bold;
+  font-size: 16px;
+}
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #E6E6FA;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.task-name {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.complete-button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Andale Mono', monospace;
+    color: green;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.complete-button:hover {
+  color: darkgreen;
+}
+.delete-button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Andale Mono', monospace;
+    color: red;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.delete-button:hover {
+  color: darkred;
+}
+.complete-button::before, .delete-button::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.complete-button::before {
+    content: '✔';
+}
+
+.delete-button::before {
+    content: '✕';
+}
+
+.complete-button:hover::before {
+  color: darkgreen;
+}
+ .delete-button:hover::before {
+    color: darkred;
+}
+.completed .task-name {
+  text-decoration: line-through;
+  color: gray;
+}
